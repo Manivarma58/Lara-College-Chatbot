@@ -118,7 +118,7 @@ const Auth = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/80 mb-10 max-w-xl mx-auto leading-relaxed">
-            Ask anything about admissions, courses, campus life, placements — our AI-powered chatbot has you covered, 24/7.
+            Ask anything about admissions, courses, campus life, placements our AI-powered chatbot has you covered, 24/7.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
