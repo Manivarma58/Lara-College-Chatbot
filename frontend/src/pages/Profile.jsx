@@ -13,14 +13,12 @@ const Profile = () => {
 
   useEffect(() => {
     if (user) {
-      supabase
-        .from("profiles")
-        .select("username, email, department, register_number")
-        .eq("user_id", user.id)
-        .single()
-        .then(({ data }) => {
-          if (data) setProfile(data);
-        });
+      setProfile({
+        username: user.user_metadata?.username || user.username || user.email?.split("@")[0],
+        email: user.email,
+        department: user.user_metadata?.department || user.department || "Computer Science & Engineering",
+        register_number: user.user_metadata?.register_number || user.register_number || "22L31A0501"
+      });
     }
   }, [user]);
 

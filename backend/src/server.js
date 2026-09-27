@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import chatRoutes from "./routes/chatRoutes.js";
 import healthRoutes from "./routes/healthRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.use((req, res, next) => {
 // Routes
 app.use("/api/health", healthRoutes);
 app.use("/api/chat", chatRoutes);
+app.use("/api/auth", authRoutes);
 
 // Root route
 app.get("/", (req, res) => {
@@ -39,6 +41,8 @@ app.get("/", (req, res) => {
     endpoints: {
       health: "/api/health",
       chat: "POST /api/chat",
+      authRegister: "POST /api/auth/register",
+      authLogin: "POST /api/auth/login",
       suggestedQuestions: "/api/chat/suggested",
       collegeInfo: "/api/chat/info"
     }

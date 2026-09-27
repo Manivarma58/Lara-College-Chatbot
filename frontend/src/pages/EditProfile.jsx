@@ -10,26 +10,24 @@ import { toast } from "sonner";
 import { ArrowLeft, User, Mail, Building2, Hash, Check } from "lucide-react";
 
 const EditProfile = () => {
-  const { user } = useAuth();
+  const { user, updateProfile } = useAuth();
   const navigate = useNavigate();
-  const [form, setForm] = useState({ username: "", email: "", department: "", register_number: "" });
+  const [form, setForm] = useState({
+    username: user?.user_metadata?.username || user?.username || "",
+    email: user?.email || "",
+    department: user?.user_metadata?.department || user?.department || "Computer Science & Engineering",
+    register_number: user?.user_metadata?.register_number || user?.register_number || "22L31A0501"
+  });
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (user) {
-      supabase
-        .from("profiles")
-        .select("username, email, department, register_number")
-        .eq("user_id", user.id)
-        .single()
-        .then(({ data }) => {
-          if (data) setForm({
-            username: data.username || "",
-            email: data.email || user.email || "",
-            department: data.department || "",
-            register_number: data.register_number || ""
-          });
-        });
+      setForm({
+        username: user?.user_metadata?.username || user?.username || "",
+        email: user?.email || "",
+        department: user?.user_metadata?.department || user?.department || "Computer Science & Engineering",
+        register_number: user?.user_metadata?.register_number || user?.register_number || "22L31A0501"
+      });
     }
   }, [user]);
 
@@ -37,16 +35,16 @@ const EditProfile = () => {
     e.preventDefault();
     if (!user) return;
     setLoading(true);
-    const { error } = await supabase
-      .from("profiles")
-      .update(form)
-      .eq("user_id", user.id);
-    setLoading(false);
-    if (error) {
-      toast.error("Failed to update profile: " + error.message);
-    } else {
+    try {
+      if (updateProfile) {
+        await updateProfile(form);
+      }
       toast.success("Profile updated successfully!");
       navigate("/profile");
+    } catch (err) {
+      toast.error("Failed to update profile: " + err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
