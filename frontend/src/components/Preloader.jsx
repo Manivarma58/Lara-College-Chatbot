@@ -1,31 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Preloader = ({ onComplete }) => {
     const [isVisible, setIsVisible] = useState(true);
+    const onCompleteRef = useRef(onComplete);
+    onCompleteRef.current = onComplete;
 
     useEffect(() => {
-        // Determine screen display time depending on if it has been seen before
-        const hasSeenPreloader = sessionStorage.getItem("hasSeenPreloader");
-
-        if (hasSeenPreloader) {
-            // Very fast or skip for repeat visits in the same session, but for demonstration 
-            // we'll run it every time. If you want to only show it once per tab, uncomment this:
-            // setIsVisible(false);
-            // onComplete();
-            // return;
-        }
-
         sessionStorage.setItem("hasSeenPreloader", "true");
 
-        // Hide preloader after a delay
         const timer = setTimeout(() => {
             setIsVisible(false);
-            setTimeout(onComplete, 800); // Wait for exit animation to finish
-        }, 2200);
+            setTimeout(() => {
+                if (onCompleteRef.current) onCompleteRef.current();
+            }, 600);
+        }, 1500);
 
         return () => clearTimeout(timer);
-    }, [onComplete]);
+    }, []);
 
     return (
         <AnimatePresence>

@@ -2,16 +2,35 @@
 import { createClient } from '@supabase/supabase-js';
 
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || "https://jjlntmlwkfopbbvtgekx.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpqbG50bWx3a2ZvcGJidnRnZWt4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4MzYyMTAsImV4cCI6MjA4NzQxMjIxMH0.DS59uYtzxbcYpq5K5Qd6c5BmoN6uqWbbZMY-pYW3Snw";
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
-export const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-  auth: {
-    storage: localStorage,
-    persistSession: true,
-    autoRefreshToken: true
-  }
-});
+let client;
+try {
+  client = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+    auth: {
+      storage: localStorage,
+      persistSession: true,
+      autoRefreshToken: true
+    }
+  });
+} catch (err) {
+  console.warn("Supabase init fallback:", err);
+  client = {
+    auth: {
+      getSession: async () => ({ data: { session: null }, error: null }),
+      onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
+      signInWithPassword: async () => ({ error: new Error("Auth service unavailable") }),
+      signUp: async () => ({ error: new Error("Auth service unavailable") }),
+      signOut: async () => ({ error: null })
+    },
+    functions: {
+      invoke: async () => ({ data: null, error: new Error("Edge function unavailable") })
+    }
+  };
+}
+
+export const supabase = client;
