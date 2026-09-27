@@ -15,8 +15,7 @@ const EditProfile = () => {
   const [form, setForm] = useState({
     username: user?.user_metadata?.username || user?.username || "",
     email: user?.email || "",
-    department: user?.user_metadata?.department || user?.department || "Computer Science & Engineering",
-    register_number: user?.user_metadata?.register_number || user?.register_number || "22L31A0501"
+    department: user?.user_metadata?.department || user?.department || "Computer Science & Engineering"
   });
   const [loading, setLoading] = useState(false);
 
@@ -25,8 +24,7 @@ const EditProfile = () => {
       setForm({
         username: user?.user_metadata?.username || user?.username || "",
         email: user?.email || "",
-        department: user?.user_metadata?.department || user?.department || "Computer Science & Engineering",
-        register_number: user?.user_metadata?.register_number || user?.register_number || "22L31A0501"
+        department: user?.user_metadata?.department || user?.department || "Computer Science & Engineering"
       });
     }
   }, [user]);
@@ -107,20 +105,6 @@ const EditProfile = () => {
                     placeholder="e.g. CSE / AI&ML / ECE"
                     value={form.department}
                     onChange={(e) => setForm((prev) => ({ ...prev, department: e.target.value }))}
-                    className="pl-10 py-5 bg-slate-950/80 border-white/15 text-white placeholder:text-slate-500 rounded-xl text-sm"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-1.5">
-                <Label htmlFor="register_number" className="text-xs font-semibold text-slate-300">Register / Roll Number</Label>
-                <div className="relative">
-                  <Hash className="absolute left-3.5 top-3.5 w-4 h-4 text-slate-400" />
-                  <Input
-                    id="register_number"
-                    placeholder="e.g. 21FE1A0501"
-                    value={form.register_number}
-                    onChange={(e) => setForm((prev) => ({ ...prev, register_number: e.target.value }))}
                     className="pl-10 py-5 bg-slate-950/80 border-white/15 text-white placeholder:text-slate-500 rounded-xl text-sm"
                   />
                 </div>

@@ -16,8 +16,7 @@ const Profile = () => {
       setProfile({
         username: user.user_metadata?.username || user.username || user.email?.split("@")[0],
         email: user.email,
-        department: user.user_metadata?.department || user.department || "Computer Science & Engineering",
-        register_number: user.user_metadata?.register_number || user.register_number || "22L31A0501"
+        department: user.user_metadata?.department || user.department || "Computer Science & Engineering"
       });
     }
   }, [user]);
@@ -76,12 +75,11 @@ const Profile = () => {
           </div>
 
           {/* Details Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
             {[
               { label: "Full Name", value: profile?.username || "Not set", icon: User },
               { label: "Registered Email", value: profile?.email || user?.email || "Not set", icon: Mail },
-              { label: "Engineering Department", value: profile?.department || "General Engineering", icon: Building2 },
-              { label: "Student Register Number", value: profile?.register_number || "Not specified", icon: Hash }
+              { label: "Engineering Department", value: profile?.department || "General Engineering", icon: Building2 }
             ].map((item) => (
               <div
                 key={item.label}
