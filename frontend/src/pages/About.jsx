@@ -45,7 +45,7 @@ const About = () => {
         <div className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl h-64 sm:h-80">
           <img
             src={collegeHero}
-            alt="Vignan Lara Administrative Block"
+            alt="Lara Administrative Block"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
@@ -54,7 +54,7 @@ const About = () => {
               Autonomous Institution · NAAC 'A+' Grade
             </span>
             <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Vignan's Lara Institute of Technology & Sciences
+              Lara Institute of Technology & Sciences
             </h1>
             <p className="text-sm sm:text-base text-slate-200 mt-1">
               Vadlamudi, Guntur, Andhra Pradesh (Affiliated to JNTUK)
@@ -73,7 +73,7 @@ const About = () => {
               </div>
               <h2 className="text-xl font-bold text-white">About the Institution</h2>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Founded under the visionary leadership of Dr. Lavu Rathaiah, Vignan's Lara has grown into a benchmark of technical excellence. The campus is accredited with NAAC 'A+' Grade and approved by AICTE, New Delhi.
+                Founded under the visionary leadership of Dr. Lavu Rathaiah, Lara has grown into a benchmark of technical excellence. The campus is accredited with NAAC 'A+' Grade and approved by AICTE, New Delhi.
               </p>
             </CardContent>
           </Card>

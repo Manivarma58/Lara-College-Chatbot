@@ -24,7 +24,7 @@ const Login = () => {
     try {
       if (isLogin) {
         await signIn(email, password);
-        toast.success("Welcome back to Vignan Lara!");
+        toast.success("Welcome back to Lara!");
       } else {
         await signUp(email, password, username);
         toast.success("Account created successfully!");
@@ -66,7 +66,7 @@ const Login = () => {
           {isLogin ? "Student & Faculty Login" : "Create Student Account"}
         </h2>
         <p className="text-slate-400 mb-8 text-center text-sm max-w-sm">
-          Access the Vignan Lara AI Enquiry Portal and sync your chat history securely.
+          Access the Lara AI Enquiry Portal and sync your chat history securely.
         </p>
 
         {/* Modern Glass Card */}

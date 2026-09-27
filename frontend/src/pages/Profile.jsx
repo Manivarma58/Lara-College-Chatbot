@@ -62,7 +62,7 @@ const Profile = () => {
               </h1>
               <p className="text-slate-400 text-sm flex items-center justify-center sm:justify-start gap-2">
                 <GraduationCap className="w-4 h-4 text-amber-400" />
-                Vignan's Lara Institute of Technology & Sciences
+                Lara Institute of Technology & Sciences
               </p>
             </div>
 

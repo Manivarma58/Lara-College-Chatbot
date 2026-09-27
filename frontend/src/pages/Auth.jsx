@@ -67,7 +67,7 @@ const features = [
     badge: "Financial Aid",
     title: "Merit Scholarships",
     desc: "Attractive tuition fee waivers for EAMCET, JEE & V-SAT high achievers.",
-    details: "Vignan Lara rewards academic brilliance. Deserving candidates with top ranks in AP EAMCET, JEE Mains, or V-SAT receive substantial fee waivers and merit awards, empowering students from all financial backgrounds to achieve excellence."
+    details: "Lara rewards academic brilliance. Deserving candidates with top ranks in AP EAMCET, JEE Mains, or V-SAT receive substantial fee waivers and merit awards, empowering students from all financial backgrounds to achieve excellence."
   }
 ];
 
@@ -97,25 +97,25 @@ const Auth = () => {
   return (
     <div className="min-h-screen pt-16 bg-slate-950 text-slate-100 overflow-x-hidden">
       {/* Hero Section with 100% Clear Building Visibility */}
-      <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-start overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] flex flex-col justify-end sm:justify-center items-start overflow-hidden">
         
-        {/* Full-Bleed Sharp Campus Background Image */}
+        {/* Full-Bleed Sharp Campus Background Image with Responsive Mobile Focal Point */}
         <div
-          className="absolute inset-0 z-0 bg-cover bg-[position:78%_center] md:bg-[position:68%_center] lg:bg-[position:60%_center] transition-all duration-700 pointer-events-none"
+          className="absolute inset-0 z-0 bg-cover bg-[position:52%_15%] sm:bg-[position:65%_center] md:bg-[position:68%_center] lg:bg-[position:60%_center] transition-all duration-700 pointer-events-none"
           style={{
             backgroundImage: `url(${collegeHero})`,
           }}
         />
 
-        {/* Subtle Horizontal Scrim for Content Readability on the Left Only */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-slate-950/90 via-slate-950/50 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-40 z-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent pointer-events-none" />
+        {/* Responsive Scrim: subtle vertical vignette on mobile to keep building visible, horizontal scrim on desktop */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-950/40 via-slate-950/20 to-slate-950/90 md:bg-gradient-to-r md:from-slate-950/90 md:via-slate-950/50 md:to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-32 sm:h-40 z-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pointer-events-none" />
 
         {/* Left-Aligned Floating Control Console */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 py-12 flex justify-start">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-3.5 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 flex justify-start">
           <motion.div
-            className="w-full max-w-xl text-left bg-slate-950/65 backdrop-blur-xl border border-white/15 p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden"
-            initial={{ opacity: 0, x: -40 }}
+            className="w-full max-w-xl text-left bg-slate-950/75 sm:bg-slate-950/65 backdrop-blur-xl border border-white/15 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-2xl relative overflow-hidden"
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}>
             
@@ -328,7 +328,7 @@ const Auth = () => {
               Institutional Excellence
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Why Choose Vignan's Lara?
+              Why Choose Lara?
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-base">
               A premier autonomous engineering institution committed to academic rigor, hands-on technical mastery, and holistic student growth.
@@ -419,7 +419,7 @@ const Auth = () => {
               <iframe
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[118%] h-[118%] object-cover pointer-events-none"
                 src="https://www.youtube-nocookie.com/embed/kvp8mlfnWKA?autoplay=1&mute=1&loop=1&playlist=kvp8mlfnWKA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&playsinline=1&fs=0"
-                title="Vignan's Lara Institute of Technology & Sciences Campus Video"
+                title="Lara Institute of Technology & Sciences Campus Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 tabIndex="-1">
@@ -462,10 +462,10 @@ const Auth = () => {
           <div>
             <div className="flex items-center gap-2 text-white font-extrabold text-xl mb-4">
               <GraduationCap className="w-6 h-6 text-amber-400" />
-              <span>Vignan Lara</span>
+              <span>Lara</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
-              Vignan's Lara Institute of Technology & Sciences is an autonomous engineering institution approved by AICTE and accredited by NAAC with 'A+' Grade.
+              Lara Institute of Technology & Sciences is an autonomous engineering institution approved by AICTE and accredited by NAAC with 'A+' Grade.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 border border-emerald-500/25 text-emerald-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -520,7 +520,7 @@ const Auth = () => {
 
         {/* Bottom Bar */}
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© 2026 Vignan's Lara Institute of Technology & Sciences. All rights reserved.</p>
+          <p>© 2026 Lara Institute of Technology & Sciences. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
             Designed with Modern AI Architecture for VLITS Students & Aspirants
           </p>

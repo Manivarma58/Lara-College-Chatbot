@@ -36,7 +36,7 @@ const Preloader = ({ onComplete }) => {
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="text-foreground tracking-[0.2em]"
                         >
-                            Vignan's Lara
+                            Lara
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}

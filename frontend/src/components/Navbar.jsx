@@ -22,10 +22,10 @@ const Navbar = () => {
         </div>
         <div className="flex flex-col text-left">
           <span className="font-extrabold text-base sm:text-lg tracking-tight text-white leading-tight">
-            Vignan <span className="text-amber-400">Lara</span>
+            <span className="text-amber-400">Lara</span> AI
           </span>
           <span className="text-[10px] text-slate-400 font-medium tracking-wider uppercase">
-            AI Enquiry Portal
+            College Enquiry Portal
           </span>
         </div>
       </Link>

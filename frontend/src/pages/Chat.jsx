@@ -26,7 +26,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([
     {
       id: "welcome",
-      text: "Hello! 👋 I am **Lara**, the official AI assistant for **Vignan's Lara Institute of Technology & Sciences (VLITS)**, Guntur.\n\nAsk me anything about **courses & seat intake**, **EAPCET cutoff ranks**, **placements (up to 44 LPA)**, **fees & JVD scholarships**, **hostels**, or **bus transport**! 🤗",
+      text: "Hello! 👋 I am **Lara**, the official AI assistant for **Lara Institute of Technology & Sciences (VLITS)**, Guntur.\n\nAsk me anything about **courses & seat intake**, **EAPCET cutoff ranks**, **placements (up to 44 LPA)**, **fees & JVD scholarships**, **hostels**, or **bus transport**! 🤗",
       sender: "bot"
     }
   ]);
@@ -250,7 +250,7 @@ const Chat = () => {
                 </span>
               </h1>
               <p className="text-[11px] text-slate-400 hidden sm:block">
-                Trained on Vignan's Lara Institute of Technology & Sciences Handbook
+                Trained on Lara Institute of Technology & Sciences Handbook
               </p>
             </div>
           </div>

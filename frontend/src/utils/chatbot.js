@@ -1,7 +1,7 @@
 const KNOWLEDGE_BASE = [
   {
     keywords: ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "good evening", "namaste"],
-    reply: `Hello! 👋 I am **Lara**, the official AI assistant for **Vignan's Lara Institute of Technology & Sciences (VLITS)**, Guntur.
+    reply: `Hello! 👋 I am **Lara**, the official AI assistant for **Lara Institute of Technology & Sciences (VLITS)**, Guntur.
 
 How can I assist you today? You can ask me about:
 * 🎓 **Courses & Approved Intake (CSE, AI&ML, ECE...)**
@@ -16,7 +16,7 @@ How can I assist you today? You can ask me about:
     keywords: ["course", "courses", "branch", "branches", "departments", "seat", "seats", "intake", "cse", "ece", "eee", "civil", "mechanical", "it", "ai", "aiml", "data science", "mca", "mtech"],
     reply: `### 🎓 Academic Programs & Approved Intake (2025–2026)
 
-Vignan's Lara Institute of Technology & Sciences offers Autonomous undergraduate and postgraduate programs under JNTUK:
+Lara Institute of Technology & Sciences offers Autonomous undergraduate and postgraduate programs under JNTUK:
 
 #### 🏛️ Undergraduate (B.Tech) Programs:
 | Branch / Specialization | Approved Seat Intake |
@@ -59,7 +59,7 @@ Cutoffs vary based on category (OC, BC, SC, ST, EWS) and gender. Below are the t
     keywords: ["placement", "placements", "recruit", "recruiter", "recruiters", "job", "jobs", "salary", "package", "internship", "internships", "career", "highest package", "average package", "tcs", "amazon", "infosys", "cisco", "deloitte"],
     reply: `### 💼 Placements & Career Highlights
 
-Vignan's Lara maintains a stellar placement record backed by a comprehensive 4-year **Campus Recruitment Training (CRT)** ecosystem:
+Lara maintains a stellar placement record backed by a comprehensive 4-year **Campus Recruitment Training (CRT)** ecosystem:
 
 * 🏆 **Highest Package:** **44 LPA** (Amazon / Global Product MNCs)
 * 📈 **Average Package:** **4.5 to 5.5 LPA**
@@ -152,7 +152,7 @@ VLITS operates safe, punctual bus routes covering daily pickups from:
     keywords: ["fest", "fests", "event", "events", "club", "clubs", "lara fest", "mahotsav", "cultural", "sports meet", "extracurricular"],
     reply: `### 🎉 Student Clubs, Fests & Campus Life
 
-Life at Vignan Lara extends far beyond textbooks:
+Life at Lara extends far beyond textbooks:
 
 * 🎪 **Lara Fest / Vignan Mahotsav:** The flagship annual national-level technical, literary, and cultural extravaganza with 10,000+ student participants.
 * 👨‍💻 **Technical Chapters:** Coding Club, Google Developer Student Club (GDSC), IEEE Student Branch, and CSI Chapter.
@@ -162,11 +162,11 @@ Life at Vignan Lara extends far beyond textbooks:
   },
   {
     keywords: ["who are you", "your name", "what is this", "bot", "lara"],
-    reply: "I am **Lara**, the official AI College Assistant for **Vignan's Lara Institute of Technology & Sciences (VLITS)**, Guntur. I am trained to give you instantaneous, verified details regarding courses, cutoff ranks, placement statistics, hostel life, fee structures, and admissions!"
+    reply: "I am **Lara**, the official AI College Assistant for **Lara Institute of Technology & Sciences (VLITS)**, Guntur. I am trained to give you instantaneous, verified details regarding courses, cutoff ranks, placement statistics, hostel life, fee structures, and admissions!"
   },
   {
     keywords: ["thank", "thanks", "thank you", "helpful", "awesome", "great", "nice"],
-    reply: "You're very welcome! If you have any more questions about courses, cutoffs, or campus life at Vignan's Lara, feel free to ask anytime. Wishing you great success! 🌟"
+    reply: "You're very welcome! If you have any more questions about courses, cutoffs, or campus life at Lara, feel free to ask anytime. Wishing you great success! 🌟"
   }
 ];
 
